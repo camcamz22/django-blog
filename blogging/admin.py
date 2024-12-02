@@ -23,6 +23,5 @@ class CategoryAdmin(admin.ModelAdmin):
     list_filter = ('name', 'posts')
     exclude = ('posts',)
 
-
 admin.site.register(Post, PostAdmin)
 admin.site.register(Category, CategoryAdmin)
