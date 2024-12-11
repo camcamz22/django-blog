@@ -1,5 +1,7 @@
 import os
+
 import dj_database_url
+
 from .settings import *
 
 DATABASES = {
@@ -10,15 +12,11 @@ DATABASES = {
 
 DEBUG = False
 TEMPLATE_DEBUG = False
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 SECRET_KEY = os.environ.get("SECRET_KEY")
-ALLOWED_HOSTS = ['django-blog-camila-python330-6715bc5d56eb.herokuapp.com',
-    'localhost',
-    '127.0.0.1',
-    '.herokuapp.com',  # Allow all Heroku subdomains
-]
+ALLOWED_HOSTS = ["*"]
 
 MIDDLEWARE = (
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     *MIDDLEWARE,
 )
