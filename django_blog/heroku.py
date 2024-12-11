@@ -1,5 +1,7 @@
 import os
+
 import dj_database_url
+
 from .settings import *
 
 DATABASES = {
@@ -12,11 +14,7 @@ DEBUG = False
 TEMPLATE_DEBUG = False
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 SECRET_KEY = os.environ.get("SECRET_KEY")
-ALLOWED_HOSTS = ['django-blog-camila-python330-6715bc5d56eb.herokuapp.com',  # Heroku's domain for your app
-    'localhost',  # Local development
-    '127.0.0.1',  # Local development
-    '.herokuapp.com',  # Allow all Heroku subdomains
-]
+ALLOWED_HOSTS = ["*"]
 
 MIDDLEWARE = (
     "whitenoise.middleware.WhiteNoiseMiddleware",
