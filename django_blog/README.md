@@ -1,1 +1,0 @@
-Repository for Fall 2024 Django project.
